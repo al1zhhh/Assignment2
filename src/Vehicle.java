@@ -1,4 +1,19 @@
-package PACKAGE_NAME;
+public abstract class Vehicle {
+    protected String brand;
+    protected int year;
+    protected Driver driver;
 
-public class Vehicle {
+    public Vehicle(String brand,int year){
+        this.brand=brand;
+        this.year=year;
+    }
+    public abstract void startEngine();
+    public abstract void stopEngine();
+
+    public void displayInfo(){
+        System.out.println("Brand: " + brand + " " +  "Year: " + year);
+    }
+    public void setDriver(Driver driver){this.driver=driver;}
+
+    public Driver getDriver(){return driver;}
 }
